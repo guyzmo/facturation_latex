@@ -1,0 +1,22 @@
+\input{.input/facture_header.tex}
+
+\def\FactureNum			{201201-001}	% Numéro de facture
+\def\FactureAcquittee	{non}		    % Facture acquittée : oui/non
+\def\FactureLieu	    {Wonderland}    % Lieu de l'édition de la facture
+\def\FactureObjet	    {Facture pour prestations d'ingénierie}  % Objet du document
+% Description de la facture
+\def\FactureDescr	{%
+Audit pour l'insécurité de l'arche de noé
+}
+
+% Infos Client
+\def\ClientNom{Noé Navigations}	% Nom du client
+\def\ClientAdresse{%					% Adresse du client
+    Mont Ararat\newline
+    42000 Ararat, PERSE
+}
+
+% Liste des produits facturés : Désignation, quantité, prix unitaire HT
+\AjouterProduit	{Audit d'antisécurité}		{1}		{420000}
+
+\input{.input/facture_footer.tex}

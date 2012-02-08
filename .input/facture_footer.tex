@@ -1,0 +1,81 @@
+\geometry{verbose,tmargin=4em,bmargin=8em,lmargin=6em,rmargin=6em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{
+	\small{
+Otto Entre-Preneur\\
+Telephone : +33(0)9 42 42 42 42 ~--~ Site web : http://auto-entrepreneur.fr ~--~ E-mail : otto69@mail.ru\\
+SIREN 042 101 010 ~--~ Code APE 42042}\\
+    \tiny{
+Dispensé d'immatriculation au registre du commerce et des sociétés et au répertoire des métiers
+	}
+}
+
+
+
+\begin{document}
+
+% Logo de la société
+%\includegraphics{logo.jpg}
+
+% Nom et adresse de la société
+Otto Entre-Preneur \\
+27 rue glacière
+75013 Paris
+
+Facture nº\FactureNum
+
+{\addtolength{\leftskip}{10.5cm} %in ERT
+	\textbf{\ClientNom}	\\
+	\ClientAdresse		\\
+
+} %in ERT
+
+\hspace*{10.5cm}
+\FactureLieu, le \today
+
+~\\~\\
+
+\textbf{Objet : \FactureObjet \\}
+
+\textnormal{\FactureDescr}
+
+%~\\
+\vspace{30mm}
+
+\begin{center}
+	\begin{tabular}{lrrr}
+		\textbf{Désignation ~~~~~~}	& \textbf{Prix unitaire}	& \textbf{Quantité}	& \textbf{Montant (EUR)}	\\
+		\hline
+		\AfficheResultat{}
+	\end{tabular}
+\end{center}
+
+%~\\
+\vspace{50mm}
+
+\ifthenelse{\equal{\FactureAcquittee}{oui}}{
+	Facture acquittée.
+}{
+
+	À régler par chèque ou par virement bancaire :
+
+	\begin{center}
+		\begin{tabular}{|c c c c|}
+			\hline 	\textbf{Code banque}	& \textbf{Code guichet}	& \textbf{Nº de Compte}		& \textbf{Clé RIB}	\\
+					00000					& 00000		 			& 00000000000				& 00				\\
+			\hline 	\textbf{IBAN Nº}		& \multicolumn{3}{|l|}{ XX00 0000 0000 0000 0000 0000 000 } 		\\
+			\hline 	\textbf{Code BIC}		& \multicolumn{3}{|l|}{ XXXXXXXXXXX } 		\\
+			\hline
+		\end{tabular}
+	\end{center}
+
+}
+
+\end{document}
