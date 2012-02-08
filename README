@@ -4,6 +4,7 @@ Ce package contient tout ce qu'il faut pour editer des factures en LaTeX tres ra
 * Renommer/Copier le fichier FA201201-001.tex et y modifier le client et ajouter des lignes de facturation
 * tapez "make"
  * "make world" va compiler les pdf en laissant les aux et log de latex
+ * "make FA201201-001.pdf" va compiler le pdf cite a partir du .tex correspondant
  * "make clean" va retirer les aux et log de latex
  * "make flush" va effacer les pdf
  * "make all"/"make" va compiler les pdf et effacer les aux et log
